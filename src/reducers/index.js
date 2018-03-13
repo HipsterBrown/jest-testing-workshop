@@ -1,11 +1,12 @@
-import SearchReducer, { initialState as searchState } from './search';
+import SearchReducer, {initialState as searchState} from './search';
+import MovieReducer, {initialState as movieState} from './movie';
 
 export const initialState = {
-  movie: {},
+  movie: movieState,
   search: searchState,
-}
+};
 
 export default {
-  movie: state => state || {},
+  movie: MovieReducer,
   search: SearchReducer,
 };

@@ -1,27 +1,29 @@
 import {LOCATION_CHANGED} from 'redux-little-router';
 import {
-  SEARCH_STARTING,
-  SEARCH_SUCCESS,
+  LOOKUP_MOVIE_STARTING,
+  LOOKUP_MOVIE_SUCCESS,
   REQUEST_ERROR,
 } from '../actions/actionTypes';
 
 export const initialState = {
   error: null,
-  loading: false,
-  resultCount: 0,
-  results: [],
+  loading: true,
+  movie: null,
 };
 
-export default function search(state = initialState, action) {
+export default function movie(state = initialState, action) {
   switch (action.type) {
-    case SEARCH_STARTING:
-      return {...state, loading: true};
-
-    case SEARCH_SUCCESS:
+    case LOOKUP_MOVIE_STARTING:
       return {
         ...state,
-        ...action.payload.data,
+        loading: true,
+      };
+
+    case LOOKUP_MOVIE_SUCCESS:
+      return {
+        ...state,
         loading: false,
+        movie: action.payload.data,
       };
 
     case REQUEST_ERROR:
@@ -34,9 +36,9 @@ export default function search(state = initialState, action) {
     case LOCATION_CHANGED:
       return {
         ...state,
-        results: [],
-        resultCount: 0,
+        movie: null,
         error: null,
+        loading: true,
       };
 
     default:
