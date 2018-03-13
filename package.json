@@ -1,0 +1,42 @@
+{
+  "name": "jest-testing-workshop",
+  "version": "1.0.0",
+  "description": "An intro and overview of testing React & Redux applications with Jest",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack",
+    "start": "webpack-dev-server",
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "HipsterBrown",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "prop-types": "^15.6.1",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-redux": "^5.0.7",
+    "redux": "^3.7.2",
+    "redux-little-router": "^15.0.0",
+    "redux-thunk": "^2.2.0",
+    "tachyons": "^4.9.1"
+  },
+  "devDependencies": {
+    "babel": "^6.23.0",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.4",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-3": "^6.24.1",
+    "clean-webpack-plugin": "^0.1.19",
+    "css-loader": "^0.28.10",
+    "enzyme": "^3.3.0",
+    "html-webpack-plugin": "^3.0.6",
+    "jest": "^22.4.2",
+    "style-loader": "^0.20.3",
+    "webpack": "^4.1.1",
+    "webpack-cli": "^2.0.11",
+    "webpack-dev-server": "^3.1.1"
+  }
+}
