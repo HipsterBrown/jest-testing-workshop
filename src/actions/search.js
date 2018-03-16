@@ -1,4 +1,3 @@
-import {push} from 'redux-little-router';
 import api from '../api';
 import {SEARCH_STARTING, SEARCH_SUCCESS, REQUEST_ERROR} from './actionTypes';
 
@@ -22,13 +21,6 @@ export function requestError(error) {
 
 export function search(term = '') {
   return dispatch => {
-    dispatch(
-      push({
-        query: {
-          term,
-        },
-      }),
-    );
     dispatch(searchStarting());
 
     return api

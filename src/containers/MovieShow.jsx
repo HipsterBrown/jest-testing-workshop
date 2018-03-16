@@ -4,11 +4,7 @@ import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
 import {lookupMovie} from '../actions/movie';
 import NavBar from '../components/NavBar';
-
-/*
- TODO:
-  - create real Loading component
-*/
+import Loading from '../components/Loading';
 
 class MovieShow extends React.Component {
   componentDidMount() {
@@ -62,7 +58,14 @@ class MovieShow extends React.Component {
     return (
       <div className="sans-serif">
         <NavBar />
-        <main className="pa4 center w-80">{content}</main>
+        <main className="pa4 center w-80">
+          {loading && (
+            <div className="tc pa4">
+              <Loading fill="#D5008F" height={200} width={200} />
+            </div>
+          )}
+          {content}
+        </main>
       </div>
     );
   }
@@ -80,6 +83,10 @@ MovieShow.propTypes = {
   lookupMovie: PropTypes.func.isRequired,
 };
 
+function mapStateToProps({movie}) {
+  return movie;
+}
+
 function mapDispatchToProps(dispatch) {
   return bindActionCreators(
     {
@@ -89,5 +96,5 @@ function mapDispatchToProps(dispatch) {
   );
 }
 
-export default connect(state => state.movie, mapDispatchToProps)(MovieShow);
+export default connect(mapStateToProps, mapDispatchToProps)(MovieShow);
 export {MovieShow as MockMovieShow};

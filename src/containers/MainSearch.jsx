@@ -5,12 +5,7 @@ import {bindActionCreators} from 'redux';
 import {search} from '../actions/search';
 import NavBar from '../components/NavBar';
 import MovieCard from '../components/MovieCard';
-
-/*
-  TODO:
-    - create MovieCard component
-    - layout results in grid
-*/
+import Loading from '../components/Loading';
 
 const MainSearch = props => (
   <div className="sans-serif">
@@ -26,26 +21,31 @@ const MainSearch = props => (
       </div>
 
       <input
-        autofocus
         className="db center w-100 ph2 pv3 f4 lh-solid"
         type="text"
         placeholder="Wall-E"
-        value={props.query.term}
         onChange={({target: {value}}) => props.search(value)}
       />
 
-      <p className="tc">Found {props.resultCount} results:</p>
-      <ul className="list ph0 cf">
-        {props.results.map(({artworkUrl100, trackName, trackId}) => (
-          <li className="fl w-20 pa2" style={{minHeight: '22rem'}}>
-            <MovieCard
-              link={`/movie/${trackId}`}
-              poster={artworkUrl100.replace('100x100', '227x227')}
-              title={trackName}
-            />
-          </li>
-        ))}
-      </ul>
+      {props.loading && (
+        <div className="tc pa4">
+          <Loading fill="#D5008F" height={200} width={200} />
+        </div>
+      )}
+
+      {!props.loading && (
+        <ul className="list ph0 flex flex-wrap">
+          {props.results.map(({artworkUrl100, trackName, trackId}) => (
+            <li className="w-20 pa2">
+              <MovieCard
+                link={`/movie/${trackId}`}
+                poster={artworkUrl100.replace('100x100', '227x227')}
+                title={trackName}
+              />
+            </li>
+          ))}
+        </ul>
+      )}
     </div>
   </div>
 );
