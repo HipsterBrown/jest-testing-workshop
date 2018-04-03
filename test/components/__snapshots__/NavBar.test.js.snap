@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<NavBar /> displays all links 1`] = `
+<nav
+  className="bg-near-black ph5 pv3 ttu f5 fw6"
+>
+  <a
+    className="link underline-hover near-white"
+    href="/"
+    onClick={[Function]}
+    target={undefined}
+  >
+    Home
+  </a>
+</nav>
+`;
