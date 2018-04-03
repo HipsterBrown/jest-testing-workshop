@@ -1,7 +1,8 @@
 {
   "name": "jest-testing-workshop",
   "version": "1.0.0",
-  "description": "An intro and overview of testing React & Redux applications with Jest",
+  "description":
+    "An intro and overview of testing React & Redux applications with Jest",
   "main": "index.js",
   "scripts": {
     "build": "webpack",
