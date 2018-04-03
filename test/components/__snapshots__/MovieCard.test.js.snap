@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<MovieCard /> displays card with link prop 1`] = `
+<div
+  className="tc"
+>
+  <img
+    alt="Test"
+    className="db w-100 ba b--black-10 mb3"
+    src="/test.png"
+  />
+  <a
+    className="link underline-hover near-black f5 fw6"
+    href="test-link.com"
+    onClick={[Function]}
+    target={undefined}
+  >
+    Test
+  </a>
+</div>
+`;
+
+exports[`<MovieCard /> displays card without link prop 1`] = `
+<div
+  className="tc"
+>
+  <img
+    alt="Test"
+    className="db w-100 ba b--black-10 mb3"
+    src="/test.png"
+  />
+  <p
+    className="f5 fw6 near-black"
+  >
+    Test
+  </p>
+</div>
+`;
