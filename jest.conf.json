@@ -1,0 +1,7 @@
+{
+  "moduleDirectories": ["node_modules", "src", "test"],
+  "setupTestFrameworkScriptFile": "<rootDir>/test/frameworkScript.js",
+  "transform": {
+    ".*": "<rootDir>/node_modules/babel-jest"
+  }
+}
