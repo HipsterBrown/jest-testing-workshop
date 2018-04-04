@@ -1,0 +1,261 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<MovieShow /> shows loading state 1`] = `
+<div
+  className="sans-serif"
+>
+  <nav
+    className="bg-near-black ph5 pv3 ttu f5 fw6"
+  >
+    <a
+      className="link underline-hover near-white"
+      href="/"
+      onClick={[Function]}
+      target={undefined}
+    >
+      Home
+    </a>
+  </nav>
+  <main
+    className="pa4 center w-80"
+  >
+    <div
+      className="tc pa4"
+    >
+      <svg
+        fill="#D5008F"
+        height={200}
+        viewBox="0 0 105 105"
+        width={200}
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <circle
+          cx="12.5"
+          cy="12.5"
+          r="12.5"
+        >
+          <animate
+            attributeName="fill-opacity"
+            begin="0s"
+            calcMode="linear"
+            dur="1s"
+            repeatCount="indefinite"
+            values="1;.2;1"
+          />
+        </circle>
+        <circle
+          cx="12.5"
+          cy="52.5"
+          fill-opacity=".5"
+          r="12.5"
+        >
+          <animate
+            attributeName="fill-opacity"
+            begin="100ms"
+            calcMode="linear"
+            dur="1s"
+            repeatCount="indefinite"
+            values="1;.2;1"
+          />
+        </circle>
+        <circle
+          cx="52.5"
+          cy="12.5"
+          r="12.5"
+        >
+          <animate
+            attributeName="fill-opacity"
+            begin="300ms"
+            calcMode="linear"
+            dur="1s"
+            repeatCount="indefinite"
+            values="1;.2;1"
+          />
+        </circle>
+        <circle
+          cx="52.5"
+          cy="52.5"
+          r="12.5"
+        >
+          <animate
+            attributeName="fill-opacity"
+            begin="600ms"
+            calcMode="linear"
+            dur="1s"
+            repeatCount="indefinite"
+            values="1;.2;1"
+          />
+        </circle>
+        <circle
+          cx="92.5"
+          cy="12.5"
+          r="12.5"
+        >
+          <animate
+            attributeName="fill-opacity"
+            begin="800ms"
+            calcMode="linear"
+            dur="1s"
+            repeatCount="indefinite"
+            values="1;.2;1"
+          />
+        </circle>
+        <circle
+          cx="92.5"
+          cy="52.5"
+          r="12.5"
+        >
+          <animate
+            attributeName="fill-opacity"
+            begin="400ms"
+            calcMode="linear"
+            dur="1s"
+            repeatCount="indefinite"
+            values="1;.2;1"
+          />
+        </circle>
+        <circle
+          cx="12.5"
+          cy="92.5"
+          r="12.5"
+        >
+          <animate
+            attributeName="fill-opacity"
+            begin="700ms"
+            calcMode="linear"
+            dur="1s"
+            repeatCount="indefinite"
+            values="1;.2;1"
+          />
+        </circle>
+        <circle
+          cx="52.5"
+          cy="92.5"
+          r="12.5"
+        >
+          <animate
+            attributeName="fill-opacity"
+            begin="500ms"
+            calcMode="linear"
+            dur="1s"
+            repeatCount="indefinite"
+            values="1;.2;1"
+          />
+        </circle>
+        <circle
+          cx="92.5"
+          cy="92.5"
+          r="12.5"
+        >
+          <animate
+            attributeName="fill-opacity"
+            begin="200ms"
+            calcMode="linear"
+            dur="1s"
+            repeatCount="indefinite"
+            values="1;.2;1"
+          />
+        </circle>
+      </svg>
+    </div>
+  </main>
+</div>
+`;
+
+exports[`<MovieShow /> shows movie data 1`] = `
+<div
+  className="sans-serif"
+>
+  <nav
+    className="bg-near-black ph5 pv3 ttu f5 fw6"
+  >
+    <a
+      className="link underline-hover near-white"
+      href="/"
+      onClick={[Function]}
+      target={undefined}
+    >
+      Home
+    </a>
+  </nav>
+  <main
+    className="pa4 center w-80"
+  >
+    <div
+      className="tc"
+    >
+      <h1
+        className="f-subheadline mt0"
+      >
+        test one
+      </h1>
+    </div>
+    <video
+      className="w-100"
+      controls={true}
+      poster="test-url-454x454.png"
+      preload="metadata"
+      src="test-preview.mp4"
+    />
+    <div
+      className="flex"
+    >
+      <div
+        className="w-70"
+      >
+        <h2
+          className="f3"
+        >
+          Summary
+        </h2>
+        <p
+          className="lh-copy"
+        >
+          test description
+        </p>
+      </div>
+      <div
+        className="ph4"
+      >
+        <h2
+          className="f3"
+        >
+          Details
+        </h2>
+        <ul
+          className="list lh-copy ph0"
+        >
+          <li>
+            <strong>
+              Genre:
+            </strong>
+             
+            Test
+          </li>
+          <li>
+            <strong>
+              Release Year:
+            </strong>
+             
+            1999
+          </li>
+          <li>
+            <strong>
+              Release Country:
+            </strong>
+             
+            USA
+          </li>
+          <li>
+            <strong>
+              Rating:
+            </strong>
+             
+            G
+          </li>
+        </ul>
+      </div>
+    </div>
+  </main>
+</div>
+`;
